@@ -30,8 +30,8 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'your_login'; // Логин на почте
-    $mail->Password   = 'password'; // Пароль на почте
+    $mail->Username   = '${{secrets.MY_SECRET_NAME}}'; // Логин на почте
+    $mail->Password   = '${{secrets.MY_PASSWORD_NAME}}'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('mail@yandex.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
