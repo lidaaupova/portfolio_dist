@@ -11,7 +11,29 @@ closeElem.addEventListener('click', () => {
     menu.classList.remove('active');
 });
 
-// Change color
+// Close hamburger
+const menuLink = menu.querySelectorAll('.menu__link a');
+
+menuLink.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    if (e.target) {
+      menu.classList.remove('active');
+    }
+  });
+});
+
+// Change color hamburger
+const spanHamburger = hamburger.querySelectorAll('span');
+
+document.addEventListener('scroll', () => {
+  if (window.pageYOffset >= 700){
+    spanHamburger.forEach(el => el.style.background = 'black');
+  }else{
+    spanHamburger.forEach(el => el.style.background='');
+  }
+});
+
+// Change color sidepanel
 const linkStyle = document.querySelectorAll('.sidepanel__link i');
  
 document.addEventListener('scroll', () => {
