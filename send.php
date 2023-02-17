@@ -30,11 +30,11 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = '${{secrets.MY_SECRET_NAME}}'; // Логин на почте
-    $mail->Password   = '${{secrets.MY_PASSWORD_NAME}}'; // Пароль на почте
+    $mail->Username   = ${{secrets.MY_SECRET_NAME}}; // Логин на почте
+    $mail->Password   = ${{secrets.MY_PASSWORD_NAME}}; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('${{secrets.MY_SECRET_NAME}}', 'Portfolio'); // Адрес самой почты и имя отправителя
+    $mail->setFrom(${{secrets.MY_SECRET_NAME}}, 'Portfolio'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('beyar42899@jobsfeel.com');  
