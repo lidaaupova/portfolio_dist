@@ -34,7 +34,7 @@ try {
     $mail->Password   = '${{secrets.MY_PASSWORD_NAME}}'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('mail@yandex.ru', 'Имя отправителя'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('${{secrets.MY_SECRET_NAME}}', 'Portfolio'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('youremail@yandex.ru');  
